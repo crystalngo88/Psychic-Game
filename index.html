@@ -80,7 +80,7 @@
     document.onkeyup= function(userGuess) {
         console.log('userGuess.key:', userGuess.key);
 
-        userGuess.textContent=event.key; // look! <3
+        userText.textContent=event.key; // look! <3
         var computerLetters=array[Math.floor(Math.random()* array.length)];
         console.log('computerLetters:', computerLetters);
         
