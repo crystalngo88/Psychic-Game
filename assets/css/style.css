@@ -1,0 +1,34 @@
+.container {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+/* body {
+    background-image: url("assets/images/background.jpg");
+} */
+
+.card-title {
+    margin-top: 25px;
+    color: lavenderblush;
+    font-size: 20px;
+    font-weight: bold;
+    background: purple;
+    border: 3px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: purple;
+    margin-top: 75px;
+}
+
+.display {
+    margin: 75px;
+}
+
+.jumbotron {
+    background-color: lavenderblush;
+    color: purple;
+}

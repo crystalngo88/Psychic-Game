@@ -4,21 +4,61 @@
     <meta charset="UTF-8">
     <title>Psychic Game</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type=text/css a href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type=text/css a href="assets/css/style.css">
 
   </head>
   <body>
       <div class="container">
+    
+    <!--Win/Lose tracker-->
+    <div class="tracker">
+        <div class="row">
+            <div class="col-md-4">
+              <!-- Win Card -->
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Wins</h5>
+                      <h6 class="card-subtitle mb-2 text-muted"> <span> ... none</span></h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Lose Card -->
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Losses</h5>
+                      <h6 class="card-subtitle mb-2 text-muted"> <span> ... none</span></h6>
+                    </div>
+                </div>
+            </div>
+
+            <!--Guesses Left-->
+            <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Guesses Left</h5>
+                          <h6 class="card-subtitle mb-2 text-muted"> <span> ... none</span></h6>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <h1>Guess the letter I'm thinking of!</h1>
+
+    <div class="display">
           <div class="row">
               <div class="col-md-offset-2 col-md-8">
                   <div class="jumbotron">
-                      <h2>You just guessed <span id="user-text"><strong>this.</strong></span></h2>
+                      <h2>You just guessed "<span id="user-text"><strong>this.</strong></span>"</h2>
                   </div>
               </div>
           </div>
       </div>
+    </div>
 
-    <h1>Guess the letter I'm thinking of!</h1>
 
     <script type="text/javascript">
 
@@ -26,44 +66,38 @@
     
     // <var userText = document.getElementById("user-text");
     // document.onkeyup = function(event) {
-    //     usesrText.textContent = event.key;
+    //     userText.textContent = event.key;
     // };
 
 
 
       // Array of letters.
-      var myLetters = ["j", "e", "a", "n", "i"];
+      var array = ["j", "e", "a", "n", "i", "g", "o"];
+      var userText= document.getElementById("user-text");
+      var win = 0;
+      var lose = 0;
 
-      // Write code to check each letter in the array to see if it matches guess.
-      for (var i = 0; i < myLetters.length; i++) {
-        if(myLetters[i] === "j") {
-            console.log("Jeanie!")
+    document.onkeyup= function(userGuess) {
+        console.log('userGuess.key:', userGuess.key);
+
+        userGuess.textContent=event.key; // look! <3
+        var computerLetters=array[Math.floor(Math.random()* array.length)];
+        console.log('computerLetters:', computerLetters);
+        
+        if(userGuess.textContent === computerLetters) { // look!
+        win++;
         }
-        else {
-            console.log(myLetters[i])
-        }
-      }
-      
-      
-      
-      
-      
-      
-      
-      
-    //   for (var i=0; i<myLetters.length; i++) {
-    //     if (myLetters[i]charAt[0]==="c") || (myLetters[i][0]==="o") {
-    //       alert("Starts with c or an o!");
-    //     }
-    //   }
-      
-    //   console.log(myLetters[0]);
-    //   console.log(myLetters[1]);
-    //   console.log(myLetters[2]);
-    //   console.log(myLetters[3]);
-    //   console.log(myLetters[4]);
-      
-    </script>
+          else{
+              lose++;
+          }
     
+        if(userText.key !== computerLetters) {
+            lose++;
+        }
+        console.log('win:', win);
+        console.log('lose:', lose);
+    };
+
+        </script>  
   </body>
 </html>
