@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Psychic Game</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+  </head>
+  <body>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-offset-2 col-md-8">
+                  <div class="jumbotron">
+                      <h2>You just guessed <span id="user-text"><strong>this.</strong></span></h2>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+    <h1>Guess the letter I'm thinking of!</h1>
+
+    <script type="text/javascript">
+
+    //Code to log user key press.
+    
+    // <var userText = document.getElementById("user-text");
+    // document.onkeyup = function(event) {
+    //     usesrText.textContent = event.key;
+    // };
+
+
+
+      // Array of letters.
+      var myLetters = ["j", "e", "a", "n", "i"];
+
+      // Write code to check each letter in the array to see if it matches guess.
+      for (var i = 0; i < myLetters.length; i++) {
+        if(myLetters[i] === "j") {
+            console.log("Jeanie!")
+        }
+        else {
+            console.log(myLetters[i])
+        }
+      }
+      
+      
+      
+      
+      
+      
+      
+      
+    //   for (var i=0; i<myLetters.length; i++) {
+    //     if (myLetters[i]charAt[0]==="c") || (myLetters[i][0]==="o") {
+    //       alert("Starts with c or an o!");
+    //     }
+    //   }
+      
+    //   console.log(myLetters[0]);
+    //   console.log(myLetters[1]);
+    //   console.log(myLetters[2]);
+    //   console.log(myLetters[3]);
+    //   console.log(myLetters[4]);
+      
+    </script>
+    
+  </body>
+</html>
