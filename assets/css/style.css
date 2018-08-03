@@ -3,9 +3,9 @@
     text-align: center;
 }
 
-/* body {
-    background-image: url("assets/images/background.jpg");
-} */
+body {
+    font-size: 25px;
+}
 
 .card-title {
     margin-top: 25px;
@@ -16,6 +16,10 @@
     border: 3px solid black;
     text-align: center;
     padding: 10px;
+}
+
+.card {
+    margin: 0 auto 0 auto;
 }
 
 h1 {

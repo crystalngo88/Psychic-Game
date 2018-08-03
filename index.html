@@ -19,8 +19,10 @@
               <!-- Win Card -->
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
-                      <h5 class="card-title">Wins</h5>
-                      <h6 class="card-subtitle mb-2 text-muted"> <span> ... none</span></h6>
+                      <h5 class="card-title">Wins 
+                          <span><p id="Wins"></p></span></h5>
+                      <h6 class="card-subtitle mb-2 text-muted">
+                          </h6>
                     </div>
                 </div>
             </div>
@@ -28,8 +30,11 @@
             <div class="col-md-4">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
-                      <h5 class="card-title">Losses</h5>
-                      <h6 class="card-subtitle mb-2 text-muted"> <span> ... none</span></h6>
+                      <h5 class="card-title">Losses 
+                        <span><p id="Losses"></p></span>
+                      </h5>
+                      <h6 class="card-subtitle mb-2 text-muted">
+                          </h6>
                     </div>
                 </div>
             </div>
@@ -38,8 +43,10 @@
             <div class="col-md-4">
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
-                          <h5 class="card-title">Guesses Left</h5>
-                          <h6 class="card-subtitle mb-2 text-muted"> <span> ... none</span></h6>
+                          <h5 class="card-title">Guesses Remaining
+                            <span><p id="guessesRemaining"></p></span>
+                          </h5>
+                          <h6 class="card-subtitle mb-2 text-muted"></h6>
                         </div>
                     </div>
                 </div>
@@ -47,57 +54,21 @@
     </div>
 
     <h1>Guess the letter I'm thinking of!</h1>
-
+    <p>Press SPACEBAR to start.</p>
+    
     <div class="display">
           <div class="row">
               <div class="col-md-offset-2 col-md-8">
-                  <div class="jumbotron">
+                  <div class="jumbotron" id="game">
                       <h2>You just guessed "<span id="user-text"><strong>this.</strong></span>"</h2>
+                      <h2>Already guessed letters: <span id="guessedLetters"></span></h2>
                   </div>
               </div>
           </div>
       </div>
     </div>
 
-
-    <script type="text/javascript">
-
-    //Code to log user key press.
-    
-    // <var userText = document.getElementById("user-text");
-    // document.onkeyup = function(event) {
-    //     userText.textContent = event.key;
-    // };
-
-
-
-      // Array of letters.
-      var array = ["j", "e", "a", "n", "i", "g", "o"];
-      var userText= document.getElementById("user-text");
-      var win = 0;
-      var lose = 0;
-
-    document.onkeyup= function(userGuess) {
-        console.log('userGuess.key:', userGuess.key);
-
-        userText.textContent=event.key; // look! <3
-        var computerLetters=array[Math.floor(Math.random()* array.length)];
-        console.log('computerLetters:', computerLetters);
-        
-        if(userGuess.textContent === computerLetters) { // look!
-        win++;
-        }
-          else{
-              lose++;
-          }
-    
-        if(userText.key !== computerLetters) {
-            lose++;
-        }
-        console.log('win:', win);
-        console.log('lose:', lose);
-    };
-
-        </script>  
-  </body>
+<script src= "assets/javascript/game.js" type ="text/javascript"></script>
+  
+</body>
 </html>
